@@ -1,0 +1,21 @@
+const Blueprint = require('factorio-blueprint');
+
+// Create a blueprint with nothing in it
+const myBlueprint = new Blueprint();
+// Import a blueprint using a blueprint string
+const blueprintString = "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";
+const importedBlueprint = new Blueprint(blueprintString);
+
+//This block add "F" in belts under scheme.
+
+let xc = -128, yc=-128;
+importedBlueprint.createEntity('transport-belt', { x: 0+xc, y: 0+yc }, Blueprint.UP);
+importedBlueprint.createEntity('transport-belt', { x: 1+xc, y: 0+yc}, Blueprint.UP);
+importedBlueprint.createEntity('transport-belt', { x: 2+xc, y: 0+yc }, Blueprint.UP);
+importedBlueprint.createEntity('transport-belt', { x: 0+xc, y: 1+yc }, Blueprint.UP);
+importedBlueprint.createEntity('transport-belt', { x: 0+xc, y: 2+yc }, Blueprint.UP);
+importedBlueprint.createEntity('transport-belt', { x: 1+xc, y: 2+yc }, Blueprint.UP);
+importedBlueprint.createEntity('transport-belt', { x: 0+xc, y: 3+yc }, Blueprint.UP);
+importedBlueprint.createEntity('transport-belt', { x: 0+xc, y: 4 +yc}, Blueprint.UP);
+// Export the string to use in-game
+console.log(importedBlueprint.encode());
